@@ -1,14 +1,14 @@
-# RedisModules-ExecuteCommand
+# fluexe- module for running external program
 
 ## Quick Start Guide
 
 Here's what you need to do to build your first module:
 
-0. Build Redis in a build supporting modules.
+0. Build fluidB in a build supporting modules.
 1. Build librmutil and the module by running `make`. (you can also build them seperatly by running `make` in their respective dirs)
-2. Run redis loading the module: `/path/to/redis-server --loadmodule ./module.so`
+2. include the module in the fluidb.conf: `loadmodule /path/to/my_module.so`
 
-Now run `redis-cli` and try the commands:
+Now run `redis-cli`  and try the commands:
 
 ```
 127.0.0.1:6379> system.exec "id"
@@ -18,5 +18,5 @@ Now run `redis-cli` and try the commands:
 127.0.0.1:6379> system.rev 127.0.0.1 9999
 ```
 
-Enjoy!
+
     
