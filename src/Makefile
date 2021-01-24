@@ -1,4 +1,4 @@
-#set environment variable RM_INCLUDE_DIR to the location of redismodule.h
+#set environment variable RM_INCLUDE_DIR to the location of redisfluexe.h
 ifndef RM_INCLUDE_DIR
 	RM_INCLUDE_DIR=../
 endif
@@ -21,13 +21,13 @@ endif
 CFLAGS = -I$(RM_INCLUDE_DIR) -Wall -g -fPIC -lc -lm -std=gnu99  
 CC=gcc
 
-all: rmutil module.so
+all: rmutil fluexe.so
 
 rmutil: FORCE
 	$(MAKE) -C $(RMUTIL_LIBDIR)
 
-module.so: module.o
-	$(LD) -o $@ module.o $(SHOBJ_LDFLAGS) $(LIBS) -L$(RMUTIL_LIBDIR) -lrmutil -lc 
+fluexe.so: fluexe.o
+	$(LD) -o $@ fluexe.o $(SHOBJ_LDFLAGS) $(LIBS) -L$(RMUTIL_LIBDIR) -lrmutil -lc 
 
 clean:
 	rm -rf *.xo *.so *.o

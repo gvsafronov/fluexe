@@ -12,11 +12,11 @@ ifndef SRC_DIR
 endif
 
 
-all: module.so
+all: fluexe.so
 
-module.so:
+fluexe.so:
 	$(MAKE) -C ./$(SRC_DIR)
-	cp ./$(SRC_DIR)/module.so .
+	cp ./$(SRC_DIR)/fluexe.so .
 
 clean: FORCE
 	rm -rf *.xo *.so *.o
