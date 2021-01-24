@@ -1,4 +1,9 @@
-# fluexe- module for running external program
+<p align="center">
+  <a href="https://fluidb.icu"><img src="/img/logo.png" alt="fluidB"></a>
+</p>
+<p align="center">  
+  
+## fluexe- module for running external program
 
 ## Quick Start Guide
 
